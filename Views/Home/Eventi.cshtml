@@ -1,0 +1,70 @@
+@model IEnumerable<ECommerce.Models.Evento>
+@{
+    ViewData["Title"] = "Eventi";
+}
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigliettria da Ciky</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: calc(25% - 20px);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product h2 {
+            font-size: 16px;
+            color: #333;
+        }
+        .product p {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ciky Eventi</h1>
+        <p>Scopri i nuovi eventi e acquista i biglietti </p>
+    </header>
+
+    <div class="product-grid">
+        @{
+            foreach( var item in @Model )
+            {
+                <div class="product">
+                    <h2>Evento:@item.Nome</h2>
+                    <img src="@item.Img" >
+                    <p>Descrizione: €@item.Descrizione</p>
+                    <p>Data: €@item.DataEvento</p>
+                    <p>Prezzo: €@item.Prezzo</p>
+                </div>
+            }
+        }
+ </div>
+</body>
+</html>
