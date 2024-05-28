@@ -1,0 +1,13 @@
+@model Utente
+@{
+    ViewData["Title"] = "Logout";
+}
+
+<h1>Logout</h1>
+<form asp-controller="Home" asp-action="P2" method="post">
+    <div>
+        <p>Per effettuare il logout clicca sul bottone</p>
+        <button type="submit" class="button">Logout</button>
+    </div>
+</form>
+<p><a href="http://localhost:5294/Home/Eventi">Link per ritornare agli eventi</a> </p>

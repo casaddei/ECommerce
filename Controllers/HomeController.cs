@@ -26,6 +26,10 @@ public class HomeController : Controller
     {
         return View();
     }
+     public IActionResult Logout ()
+    {
+        return View();
+    }
     [HttpPost]
     public IActionResult P1(Utente u)
     {
@@ -43,6 +47,12 @@ public class HomeController : Controller
             }
         }
         return View("Registrati");
+    }
+    [HttpPost]
+    public IActionResult P2()
+    {
+        HttpContext.Session.Clear();
+        return View("Accedi");
     }
      public IActionResult Registrati ()
     {

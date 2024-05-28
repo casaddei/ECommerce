@@ -25,7 +25,7 @@
             padding: 20px;
         }
         .product {
-            background: white;
+            background: whitesmoke;
             margin: 10px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             width: calc(25% - 20px);
@@ -57,9 +57,9 @@
         @{
             foreach( var item in @Model )
             {
-                <div class="product">
+                <div class="product" >
                     <h2 >@item.Nome</h2>
-                    <img src="@item.Img">
+                    <img src="/@item.Img">
                     <p>Descrizione: @item.Descrizione</p>
                     <p>Data: @item.DataEvento</p>
                     <p>Prezzo: €@item.Prezzo</p>
