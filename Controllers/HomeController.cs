@@ -46,7 +46,7 @@ public class HomeController : Controller
                 return View("AreaRiservata");
             }
         }
-        return View("Registrati");
+        return View("Errore");
     }
     [HttpPost]
     public IActionResult P2()

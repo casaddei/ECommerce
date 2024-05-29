@@ -1,7 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Http;
 @inject IHttpContextAccessor HttpContextAccessor
 
-
 @{
     string? nomeUtente = HttpContextAccessor?.HttpContext?.Session.GetString("NomeUtente");
 }
@@ -10,7 +9,46 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Benvenuti nella biglietteria da Ciky</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">TicketOnline</h1>
+        <p class="lead">Benvenuto</p>
+    </div>
+
+    <div class="card shadow-sm mb-5">
+        <div class="card-body">
+            <h2 class="card-title">CHI SIAMO</h2>
+            <p class="card-text">
+                TicketOnline nasce nel 2024 con l'idea di offrire al pubblico la possibilità di acquistare biglietti per eventi di ogni tipo, sportivi, culturali, concerti e molto altro.
+                La nostra missione è rendere l'acquisto di biglietti semplice, veloce e sicuro.
+            </p>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-5">
+        <div class="card-body">
+            <h2 class="card-title">I NOSTRI VALORI</h2>
+            <p class="card-text">
+                Noi di TicketOnline crediamo nel valore dell'inclusività e dell'accessibilità. Lavoriamo ogni giorno per garantire che tutti possano accedere agli eventi che amano.
+                Ci impegniamo a fornire un servizio clienti eccellente e a mantenere i più alti standard di sicurezza e affidabilità.
+            </p>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-5">
+        <div class="card-body">
+            <h2 class="card-title">COSA OFFRIAMO</h2>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-primary"></i> Biglietti per eventi sportivi</li>
+                <li><i class="fas fa-check-circle text-primary"></i> Biglietti per concerti</li>
+                <li><i class="fas fa-check-circle text-primary"></i> Biglietti per eventi culturali</li>
+                <li><i class="fas fa-check-circle text-primary"></i> Eventi esclusivi</li>
+                <li><i class="fas fa-check-circle text-primary"></i> Offerte speciali e promozioni</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 TicketOnline. Tutti i diritti riservati.</p>
+    </footer>
 </div>

@@ -3,11 +3,13 @@
     ViewData["Title"] = "Logout";
 }
 
-<h1>Logout</h1>
-<form asp-controller="Home" asp-action="P2" method="post">
-    <div>
-        <p>Per effettuare il logout clicca sul bottone</p>
-        <button type="submit" class="button">Logout</button>
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+        <h1 class="display-4">Logout</h1>
+        <p class="lead">Per effettuare il logout clicca sul bottone</p>
+        <form asp-controller="Home" asp-action="P2" method="post">
+            <button type="submit" class="btn btn-danger btn-lg">Logout</button>
+        </form>
+        <p class="mt-3"><a class="btn btn-primary" href=http://localhost:5294/Home/Eventi>Ritorna agli Eventi</a></p>
     </div>
-</form>
-<p><a href="http://localhost:5294/Home/Eventi">Link per ritornare agli eventi</a> </p>
+</div>

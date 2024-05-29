@@ -1,8 +1,22 @@
 @model Utente
 @{
-    ViewData["Title"] = "Accedi";
+    ViewData["Title"] = "Errore";
 }
 
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header text-center bg-danger text-white">
+                    <h2>Errore nel Login</h2>
+                </div>
+                <div class="card-body">
+                    <p class="text-center">C'è stato un errore nella fase di Login. Potresti aver sbagliato il nome utente oppure la password.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">

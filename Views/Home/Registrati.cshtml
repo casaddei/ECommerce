@@ -1,46 +1,63 @@
 @model Utente
 @{
-     ViewData["Title"] = "Registrati";
+    ViewData["Title"] = "Registrati";
 }
 
-<h2>Modulo di prenotazione</h2>
-<p>Riempi i seguenti campi e registrati sul nostro sito</p>
-<form asp-controller="Home" asp-action="Registrato" method="post">
-     <div class="form-group">
-          <label asp-for="Nome"></label>
-          <input type="text" asp-for="Nome" class="form-control" />
-          <span asp-validation-for="Nome" />
-     </div>
-     <div class="form-group">
-          <label asp-for="Cognome"></label>
-          <input type="text" asp-for="Cognome" class="form-control" />
-          <span asp-validation-for="Cognome" />
-     </div>
-     <div class="form-group">
-          <label asp-for="DataNascita"></label>
-          <input type="date" asp-for="DataNascita" class="form-control" />
-          <span asp-validation-for="DataNascita" />
-     </div>
-     <div class="form-group">
-          <label asp-for="Email"></label>
-          <textarea asp-for="Email" class="form-control"></textarea>
-          <span asp-validation-for="Email" />
-     </div>
-     <div class="form-group">
-          <label asp-for="User"></label>
-          <input type="password" asp-for="User" class="form-control" />
-          <span asp-validation-for="User" />
-     </div>
-     <div class="form-group">
-          <label asp-for="Password"></label>
-          <input type="password" asp-for="Password" class="form-control" />
-          <span asp-validation-for="Password" />
-     </div>
-     <div class="form-group">
-          <div asp-validation-summary="All"></div>
-          <button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-send"></i>Registrati</button>
-     </div>
-</form>
-<div class="text-center">
-     <h1 class="display-4">Pagina di Registrazione</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header text-center bg-primary text-white">
+                    <h2>Modulo di Registrazione</h2>
+                </div>
+                <div class="card-body">
+                    <p class="text-center">Riempi i seguenti campi e registrati sul nostro sito</p>
+                    <form asp-controller="Home" asp-action="Registrato" method="post">
+                        <div class="form-group">
+                            <label asp-for="Nome" class="font-weight-bold">Nome</label>
+                            <input type="text" asp-for="Nome" class="form-control" />
+                            <span asp-validation-for="Nome" class="text-danger" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Cognome" class="font-weight-bold">Cognome</label>
+                            <input type="text" asp-for="Cognome" class="form-control" />
+                            <span asp-validation-for="Cognome" class="text-danger" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DataNascita" class="font-weight-bold">Data di Nascita</label>
+                            <input type="date" asp-for="DataNascita" class="form-control" />
+                            <span asp-validation-for="DataNascita" class="text-danger" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="font-weight-bold">Email</label>
+                            <textarea asp-for="Email" class="form-control"></textarea>
+                            <span asp-validation-for="Email" class="text-danger" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="User" class="font-weight-bold">Nome Utente</label>
+                            <input type="text" asp-for="User" class="form-control" />
+                            <span asp-validation-for="User" class="text-danger" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password" class="font-weight-bold">Password</label>
+                            <input type="password" asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger" />
+                        </div>
+                        <div class="form-group">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="d-flex justify-content-between">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-user-plus"></i> Registrati
+                                </button>
+                                <button type="reset" class="btn btn-secondary btn-lg">Annulla</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <h1 class="display-4">Pagina di Registrazione</h1>
+    </div>
 </div>
